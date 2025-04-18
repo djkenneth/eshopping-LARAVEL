@@ -82,7 +82,7 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
+        'pgsql_primary' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -91,6 +91,21 @@ return [
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
             'charset' => env('DB_CHARSET', 'utf8'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'search_path' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+        'pgsql_secondary' => [
+            'driver' => 'pgsql',
+            'url' => env('DATABASE_SECONDARY_URL'),
+            'host' => env('DB_SECONDARY_HOST', '127.0.0.1'),
+            'port' => env('DB_SECONDARY_PORT', '5432'),
+            'database' => env('DB_SECONDARY_DATABASE', 'forge'),
+            'username' => env('DB_SECONDARY_USERNAME', 'forge'),
+            'password' => env('DB_SECONDARY_PASSWORD', ''),
+            'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
