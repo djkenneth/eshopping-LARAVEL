@@ -6,16 +6,16 @@ import { Head } from '@inertiajs/vue3';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Dashboard',
-        href: '/dashboard',
+        title: 'Products',
+        href: '/products',
     },
 ];
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Products" />
     <AppLayout :breadcrumbs="breadcrumbs">
-
+        Hello world
     </AppLayout>
 </template>
 
