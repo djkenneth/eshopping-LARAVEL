@@ -82,7 +82,7 @@ return [
             ]) : [],
         ],
 
-        'pgsql_primary' => [
+        'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -97,14 +97,13 @@ return [
             'sslmode' => 'prefer',
         ],
 
-        'pgsql_secondary' => [
+        'uac_db' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_SECONDARY_URL'),
-            'host' => env('DB_SECONDARY_HOST', '127.0.0.1'),
-            'port' => env('DB_SECONDARY_PORT', '5432'),
-            'database' => env('DB_SECONDARY_DATABASE', 'forge'),
-            'username' => env('DB_SECONDARY_USERNAME', 'forge'),
-            'password' => env('DB_SECONDARY_PASSWORD', ''),
+            'host' => env('UAC_DB_HOST', '127.0.0.1'),
+            'port' => env('UAC_DB_PORT', '5432'),
+            'database' => env('UAC_DB_DATABASE', 'eshopping_uac'),
+            'username' => env('UAC_DB_USERNAME', 'forge'),
+            'password' => env('UAC_DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
