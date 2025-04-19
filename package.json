@@ -1,0 +1,16 @@
+{
+    "name": "eshopping",
+    "version": "1.0.0",
+    "description": "E-Shopping Management System",
+    "scripts": {
+      "dev": "concurrently \"cd UAC && bun dev\" \"cd PRODUCTS && bun dev\"",
+      "dev:uac": "cd UAC && bun dev",
+      "dev:products": "cd PRODUCTS && bun dev",
+      "build": "concurrently \"cd UAC && bun run build\" \"cd PRODUCTS && bun run build\"",
+      "build:uac": "cd UAC && bun run build",
+      "build:products": "cd PRODUCTS && bun run build"
+    },
+    "dependencies": {
+      "concurrently": "^8.2.0"
+    }
+  }
